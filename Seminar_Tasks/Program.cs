@@ -18,6 +18,7 @@ int[,] CreatRandom2DArray(int oneSize = 1, int twoSize = 2, bool fill = true)
     int rows = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите число столбцов: ");
     int columns = Convert.ToInt32(Console.ReadLine());
+    int[,] newArray = new int[rows, columns];
 
     int minValue = 0; int maxValue = 0;
     if (fill)
@@ -26,15 +27,11 @@ int[,] CreatRandom2DArray(int oneSize = 1, int twoSize = 2, bool fill = true)
         minValue = Convert.ToInt32(Console.ReadLine());
         Console.Write("Введите максимальное значение элемента: ");
         maxValue = Convert.ToInt32(Console.ReadLine());
-    }
- 
-    int[,] newArray = new int[rows, columns];
 
-    if (fill)
         for (int i = 0; i < rows; i++)
             for (int j = 0; j < columns; j++)
                 newArray[i, j] = new Random().Next(minValue, maxValue + 1);
-
+    }
     Console.WriteLine("");
     return newArray;
 }
