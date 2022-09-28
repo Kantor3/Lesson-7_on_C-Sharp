@@ -146,7 +146,6 @@ int SummElemMD(int[,] array)
 // Основное тело программы.
 Console.WriteLine(@"Задача-47. Находим сумму элементов главной диагонали:");
 Console.WriteLine("---");
-// Console.WriteLine("'0' - для завершения:");
 
 while (true)
 {
